@@ -61,3 +61,5 @@ Go (Golang) Backend Project Layout with Gin and SQLite
 
 ### If this project helps you in anyway, show your love ❤️ by putting a ⭐ on this project ✌️
 
+#### This project layout is inspired by [Go backend clean architecture](https://amitshekhar.me/blog/go-backend-clean-architecture)
+

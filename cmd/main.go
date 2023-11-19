@@ -27,9 +27,14 @@ func main() {
 	server.Use(gin.Recovery(), middleware.Logger())
 	route.Setup(env, db, server)
 
-	serverAddress := env.ServerAddress
-	if serverAddress == "" {
-		serverAddress = ":8080"
+	var serverAddress string
+	if env.Host != "" {
+		serverAddress = env.Host
+	}
+	if env.Port == "" {
+		serverAddress += ":80"
+	} else {
+		serverAddress += ":" + env.Port
 	}
 	server.Run(serverAddress)
 }
